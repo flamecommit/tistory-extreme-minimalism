@@ -48,14 +48,6 @@
 	</cover>
 	<variables>
 		<variable>
-			<name>logoImage</name>
-			<label>로고 (높이 82px)</label>
-			<description></description>
-			<type>IMAGE</type>
-			<option></option>
-			<default></default>
-		</variable>
-		<variable>
 			<name>footerCopyright</name>
 			<label>하단 카피라이트</label>
 			<description></description>

@@ -55,5 +55,13 @@
 			<option></option>
 			<default></default>
 		</variable>
+		<variable>
+			<name>footerCopyright</name>
+			<label>하단 카피라이트</label>
+			<description></description>
+			<type>STRING</type>
+			<option></option>
+			<default>Designed by 신과장.</default>
+		</variable>
 	</variables>
 </skin>

@@ -116,8 +116,11 @@
           <!-- 목록 페이지 -->
           <s_list>
             <div class="list-page">
-              <div class="page-title">
-                <h2>[##_list_conform_##]</h2>
+              <div class="list-header">
+                <h2>
+                  [##_list_conform_##]
+                  <span class="count">([##_list_count_##])</span>
+                </h2>
               </div>
               <div class="article-list">
                 <s_list_rep>
@@ -172,18 +175,16 @@
                 <!-- 태그 -->
                 <s_tag_label>
                   <div class="article-tag">
-                    <h3 class="title">TAG</h2>
+                    <h3 class="title">TAG</h3>
                     <div class="tags">[##_tag_label_rep_##]</div>
                   </div>
                 </s_tag_label>
                 <!-- End : 태그 -->
 
                 <!-- 댓글 영역 -->
-                  <s_rp>
-                    <div class="article-reply">
-                      [##_comment_group_##]
-                    </div>
-                  </s_rp>
+                <s_rp>
+                  <div class="article-reply">[##_comment_group_##]</div>
+                </s_rp>
                 <!-- End : 댓글 영역 -->
               </div>
             </s_permalink_article_rep>
@@ -215,15 +216,17 @@
           <!-- 페이지네이션 -->
           <s_paging>
             <div id="pagination">
-              <a [##_prev_page_##] class="arrow prev [##_no_more_prev_##]">이전</a>
+              <a [##_prev_page_##] class="arrow prev [##_no_more_prev_##]"
+                >이전</a
+              >
               <div class="pager">
                 <s_paging_rep>
-                  <a [##_paging_rep_link_##]
-                    >[##_paging_rep_link_num_##]</a
-                  >
+                  <a [##_paging_rep_link_##]>[##_paging_rep_link_num_##]</a>
                 </s_paging_rep>
               </div>
-              <a [##_next_page_##] class="arrow next [##_no_more_next_##]">다음</a>
+              <a [##_next_page_##] class="arrow next [##_no_more_next_##]"
+                >다음</a
+              >
             </div>
           </s_paging>
           <!-- End : 페이지네이션 -->

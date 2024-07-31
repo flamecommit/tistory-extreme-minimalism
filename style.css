@@ -99,6 +99,9 @@ input:-webkit-autofill:active {
   font-weight: 700;
   font-size: 20px;
 }
+#header .logo a:hover {
+  color: #f75b00;
+}
 #header .btn-area {
   display: flex;
   -moz-column-gap: 12px;
@@ -107,15 +110,23 @@ input:-webkit-autofill:active {
 #header .btn-area button {
   width: 30px;
   height: 30px;
-  background-size: 20px;
-  background-position: center;
+  -webkit-mask-size: 20px;
+          mask-size: 20px;
+  -webkit-mask-position: center;
+          mask-position: center;
   font-size: 0;
+  background-color: #000;
 }
 #header .btn-area button.drawer-opener {
-  background-image: url(./images/hamburger.svg);
+  -webkit-mask-image: url(./images/hamburger.svg);
+          mask-image: url(./images/hamburger.svg);
 }
 #header .btn-area button.search-opener {
-  background-image: url(./images/search.svg);
+  -webkit-mask-image: url(./images/search.svg);
+          mask-image: url(./images/search.svg);
+}
+#header .btn-area button:hover {
+  background-color: #f75b00;
 }
 
 #drawer {
@@ -169,6 +180,9 @@ input:-webkit-autofill:active {
 #drawer .gnb .category_list > li > a {
   font-size: 26px;
 }
+#drawer .gnb .category_list > li > a:hover {
+  color: #f7a000;
+}
 #drawer .gnb .sub_category_list {
   margin-top: 16px;
   display: grid;
@@ -176,6 +190,9 @@ input:-webkit-autofill:active {
 }
 #drawer .gnb .sub_category_list > li > a {
   font-size: 16px;
+}
+#drawer .gnb .sub_category_list > li > a:hover {
+  color: #f7a000;
 }
 
 #search {
@@ -244,19 +261,29 @@ input:-webkit-autofill:active {
           mask-size: 60px;
   background-color: #fff;
 }
+#search form .btn-search:hover {
+  background-color: #f7a000;
+}
 
 #main {
   max-width: 808px;
   margin-inline: auto;
   padding: 50px 20px 100px;
 }
-#main .page-title {
-  margin-bottom: 50px;
+#main .list-header {
+  margin-bottom: 20px;
 }
-#main .page-title h2 {
-  text-align: center;
+#main .list-header h2 {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 6px;
+       column-gap: 6px;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 18px;
+}
+#main .list-header h2 .count {
+  font-size: 16px;
+  color: #f75b00;
 }
 #main .article-list {
   display: grid;
@@ -306,7 +333,7 @@ input:-webkit-autofill:active {
   font-size: 20px;
 }
 #main .article-list .article-item .info .title a:hover {
-  text-decoration: underline;
+  color: #f75b00;
 }
 #main .article-list .article-item .info .category {
   margin-top: 6px;
@@ -315,7 +342,7 @@ input:-webkit-autofill:active {
   font-size: 14px;
 }
 #main .article-list .article-item .info .category a:hover {
-  text-decoration: underline;
+  color: #f75b00;
 }
 #main .article-list .article-item .info .date {
   margin-top: 12px;
@@ -336,7 +363,7 @@ input:-webkit-autofill:active {
   margin-top: 12px;
 }
 #main .article-viewer .article-header .category a:hover {
-  text-decoration: underline;
+  color: #f75b00;
 }
 #main .article-viewer .article-header .date {
   margin-top: 6px;
@@ -365,6 +392,9 @@ input:-webkit-autofill:active {
 }
 #main .article-viewer .article-tag .tags a:not(:first-child) {
   margin-left: 4px;
+}
+#main .article-viewer .article-tag .tags a:hover {
+  color: #f75b00;
 }
 #main .article-viewer .article-reply {
   margin-top: 100px;
@@ -488,6 +518,9 @@ input:-webkit-autofill:active {
   justify-content: center;
   cursor: pointer;
 }
+#pagination a:hover {
+  color: #f75b00;
+}
 #pagination .pager {
   display: flex;
   justify-content: center;
@@ -507,9 +540,13 @@ input:-webkit-autofill:active {
 #pagination .arrow.prev {
   transform: rotate(180deg);
 }
+#pagination .arrow:hover {
+  background-color: #f75b00;
+}
 #pagination .arrow.no-more-prev, #pagination .arrow.no-more-next {
   opacity: 0.3;
   cursor: default;
+  background-color: #333 !important;
 }
 
 #footer {

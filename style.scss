@@ -1,6 +1,9 @@
 @charset "UTF-8";
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
+$orange: #f75b00;
+$brightOrange: #f7a000;
+
 *,
 ::before,
 ::after {
@@ -91,6 +94,9 @@ input:-webkit-autofill:active {
       display: block;
       font-weight: 700;
       font-size: 20px;
+      &:hover {
+        color: $orange;
+      }
     }
   }
   .btn-area {
@@ -99,14 +105,18 @@ input:-webkit-autofill:active {
     button {
       width: 30px;
       height: 30px;
-      background-size: 20px;
-      background-position: center;
+      mask-size: 20px;
+      mask-position: center;
       font-size: 0;
+      background-color: #000;
       &.drawer-opener {
-        background-image: url(./images/hamburger.svg);
+        mask-image: url(./images/hamburger.svg);
       }
       &.search-opener {
-        background-image: url(./images/search.svg);
+        mask-image: url(./images/search.svg);
+      }
+      &:hover {
+        background-color: $orange;
       }
     }
   }
@@ -161,6 +171,9 @@ input:-webkit-autofill:active {
       > li {
         > a {
           font-size: 26px;
+          &:hover {
+            color: $brightOrange;
+          }
         }
       }
     }
@@ -171,6 +184,9 @@ input:-webkit-autofill:active {
       > li {
         > a {
           font-size: 16px;
+          &:hover {
+            color: $brightOrange;
+          }
         }
       }
     }
@@ -233,6 +249,9 @@ input:-webkit-autofill:active {
       mask-position: center;
       mask-size: 60px;
       background-color: #fff;
+      &:hover {
+        background-color: $brightOrange;
+      }
     }
   }
 }
@@ -241,12 +260,18 @@ input:-webkit-autofill:active {
   max-width: 808px;
   margin-inline: auto;
   padding: 50px 20px 100px;
-  .page-title {
-    margin-bottom: 50px;
+  .list-header {
+    margin-bottom: 20px;
     h2 {
-      text-align: center;
+      display: flex;
+      align-items: center;
+      column-gap: 6px;
       font-weight: 700;
-      font-size: 24px;
+      font-size: 18px;
+      .count {
+        font-size: 16px;
+        color: $orange;
+      }
     }
   }
   .article-list {
@@ -291,7 +316,7 @@ input:-webkit-autofill:active {
             font-weight: 700;
             font-size: 20px;
             &:hover {
-              text-decoration: underline;
+              color: $orange;
             }
           }
         }
@@ -300,7 +325,7 @@ input:-webkit-autofill:active {
           a {
             font-size: 14px;
             &:hover {
-              text-decoration: underline;
+              color: $orange;
             }
           }
         }
@@ -326,7 +351,7 @@ input:-webkit-autofill:active {
         margin-top: 12px;
         a {
           &:hover {
-            text-decoration: underline;
+            color: $orange;
           }
         }
       }
@@ -356,6 +381,9 @@ input:-webkit-autofill:active {
           }
           &:not(:first-child) {
             margin-left: 4px;
+          }
+          &:hover {
+            color: $orange;
           }
         }
       }
@@ -487,6 +515,9 @@ input:-webkit-autofill:active {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    &:hover {
+      color: $orange;
+    }
   }
   .pager {
     display: flex;
@@ -502,10 +533,14 @@ input:-webkit-autofill:active {
     &.prev {
       transform: rotate(180deg);
     }
+    &:hover {
+      background-color: $orange;
+    }
     &.no-more-prev,
     &.no-more-next {
       opacity: 0.3;
       cursor: default;
+      background-color: #333 !important;
     }
   }
 }

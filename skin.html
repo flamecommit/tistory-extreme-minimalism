@@ -18,11 +18,45 @@
     <link rel="stylesheet" href="./style.css" />
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
-    <script src="./images/common.js"></script>
   </head>
 
   <body id="[##_body_id_##]">
     <s_t3>
+      <script>
+        const UI = {
+          openDrawer: function () {
+            $("body").addClass("scroll-lock");
+            $("#drawer").addClass("on");
+          },
+          closeDrawer: function () {
+            $("body").removeClass("scroll-lock");
+            $("#drawer").removeClass("on");
+          },
+          openSearch: function () {
+            $("body").addClass("scroll-lock");
+            $("#search").addClass("on");
+            $('#search input[type="search"]').val("");
+            $('#search input[type="search"]').focus();
+          },
+          closeSearch: function () {
+            $("body").removeClass("scroll-lock");
+            $("#search").removeClass("on");
+          },
+        };
+
+        $(document).ready(() => {
+          $("#drawer").on("click", function (e) {
+            if (e.currentTarget === e.target) {
+              UI.closeDrawer();
+            }
+          });
+          $("#search").on("click", function (e) {
+            if (e.currentTarget === e.target) {
+              UI.closeSearch();
+            }
+          });
+        });
+      </script>
       <div id="wrapper">
         <header id="header">
           <div class="inner">
@@ -43,7 +77,7 @@
               <button
                 type="button"
                 class="search-opener"
-                onclick="$('#search').toggleClass('on')"
+                onclick="UI.openSearch()"
               >
                 검색
               </button>

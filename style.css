@@ -127,6 +127,7 @@ input:-webkit-autofill:active {
   height: 0;
   opacity: 0;
   z-index: 100;
+  min-width: 360px;
   transition: opacity 300ms, height 1ms 299ms;
   display: flex;
   justify-content: center;
@@ -141,6 +142,7 @@ input:-webkit-autofill:active {
   height: 100%;
   opacity: 1;
   transition: opacity 300ms;
+  padding: 20px;
 }
 #drawer .gnb {
   display: grid;
@@ -185,6 +187,7 @@ input:-webkit-autofill:active {
   height: 0;
   opacity: 0;
   z-index: 100;
+  min-width: 360px;
   transition: opacity 300ms, height 1ms 299ms;
   display: flex;
   justify-content: center;
@@ -199,6 +202,7 @@ input:-webkit-autofill:active {
   height: 100%;
   opacity: 1;
   transition: opacity 300ms;
+  padding: 20px;
 }
 #search form {
   display: block;
@@ -212,6 +216,7 @@ input:-webkit-autofill:active {
   width: 100%;
   height: 100px;
   font-size: 48px;
+  padding-right: 60px;
   color: #fff;
   background-color: transparent;
   border: solid #fff;
@@ -241,9 +246,9 @@ input:-webkit-autofill:active {
 }
 
 #main {
-  max-width: 768px;
+  max-width: 808px;
   margin-inline: auto;
-  padding: 50px 30px 100px;
+  padding: 50px 20px 100px;
 }
 #main .page-title {
   margin-bottom: 50px;
@@ -260,10 +265,11 @@ input:-webkit-autofill:active {
 #main .article-list .article-item {
   display: flex;
   align-items: center;
-  -moz-column-gap: 24px;
-       column-gap: 24px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
 }
 #main .article-list .article-item .thumbnail {
+  flex-shrink: 0;
   position: relative;
   overflow: hidden;
   width: 120px;
@@ -292,16 +298,24 @@ input:-webkit-autofill:active {
           mask-position: center;
   background-color: #999;
 }
-#main .article-list .article-item .info .title {
-  font-weight: 700;
-  font-size: 20px;
-}
 #main .article-list .article-item .info .title img {
   display: none;
 }
+#main .article-list .article-item .info .title a {
+  font-weight: 700;
+  font-size: 20px;
+}
+#main .article-list .article-item .info .title a:hover {
+  text-decoration: underline;
+}
 #main .article-list .article-item .info .category {
   margin-top: 6px;
+}
+#main .article-list .article-item .info .category a {
   font-size: 14px;
+}
+#main .article-list .article-item .info .category a:hover {
+  text-decoration: underline;
 }
 #main .article-list .article-item .info .date {
   margin-top: 12px;
@@ -310,7 +324,7 @@ input:-webkit-autofill:active {
 }
 #main .article-viewer .article-header {
   padding-bottom: 50px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   text-align: center;
   border-bottom: 1px solid #eee;
 }
@@ -320,6 +334,9 @@ input:-webkit-autofill:active {
 }
 #main .article-viewer .article-header .category {
   margin-top: 12px;
+}
+#main .article-viewer .article-header .category a:hover {
+  text-decoration: underline;
 }
 #main .article-viewer .article-header .date {
   margin-top: 6px;

@@ -16,14 +16,14 @@
       href="[##_rss_url_##]"
     />
     <link rel="stylesheet" href="./style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
     <script src="./images/common.js"></script>
   </head>
 
   <body id="[##_body_id_##]">
     <s_t3>
-      <div id="wrap">
-        <!-- Header -->
+      <div id="wrapper">
         <header id="header">
           <div class="inner-header">
             <h1 class="logo">
@@ -32,331 +32,167 @@
                 [##_title_##]
               </a>
             </h1>
-            <button type="button" class="btn_menu">
-              <span class="icon-Menu"></span><span class="icon-Close"></span
-              ><span class="blind">메뉴</span>
-            </button>
-            <button class="btn_search">
-              <span class="icon-Search"></span><span class="blind">검색</span>
-            </button>
-
-            <!-- btn_search 클릭하면 나옴 /-->
-            <div class="area_search thema_apply" style="display: none">
-              <form action="" method="get">
-                <legend><span class="blind">컨텐츠 검색</span></legend>
-                <s_search>
-                  <label for="[##_search_name_##]" class="screen_out"
-                    >블로그 내 검색</label
-                  >
-                  <input
-                    id="[##_search_name_##]"
-                    type="text"
-                    name="[##_search_name_##]"
-                    title="Search"
-                    placeholder="Search"
-                    value="[##_search_text_##]"
-                    class="inp_search"
-                    onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }"
-                  />
-                </s_search>
-                <button
-                  type="button"
-                  title="검색어 삭제"
-                  class="btn_search_del"
-                ></button>
-              </form>
-            </div>
+            <button type="button" class="drawer-opener">메뉴</button>
+            <button type="button" class="search-opener">검색</button>
           </div>
         </header>
-        <!-- End : Header -->
 
-        <!-- Drawer -->
         <div id="drawer">
           <nav class="gnb">[##_blog_menu_##] [##_category_list_##]</nav>
         </div>
-        <!-- End : Drawer -->
 
-        <!-- container  / header에 btn_search 클릭하면 class에 search_on 추가(모바일에서만 작동) -->
-        <div id="container">
-          <main id="main">
-            [##_revenue_list_upper_##]
-            <div class="inner_index">
-              <!-- 페이지 타이틀 -->
-              <s_list>
-                <div
-                  class="category_list index_type_common index_type_horizontal"
-                >
-                  <h2 class="title_category">[##_list_conform_##]</h2>
-                </div>
-              </s_list>
-              <!-- End : 페이지 타이틀 -->
+        <div id="search">
+          <form action="" method="get">
+            <s_search>
+              <input
+                id="[##_search_name_##]"
+                type="search"
+                name="[##_search_name_##]"
+                placeholder="Search"
+                value="[##_search_text_##]"
+                onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }"
+              />
+            </s_search>
+            <button type="button" class="keyword-cleaner">검색어 삭제</button>
+          </form>
+        </div>
 
-              <!-- 전체글, 카테고리 리스트 -->
-              <div
-                class="category_list index_type_common index_type_horizontal"
-              >
-                <ul class="list_horizontal">
-                  <s_article_rep>
-                    <s_index_article_rep>
-                      <li class="list_horizontal_item">
-                        <div class="article_content">
-                          <div class="thumbnail_zone">
-                            <a
-                              href="[##_article_rep_link_##]"
-                              class="thumbnail_post"
-                              style="
-                                background-image: url('[##_article_rep_thumbnail_url_##]') !important;
-                              "
-                            >
-                              <s_article_rep_thumbnail></s_article_rep_thumbnail>
-                            </a>
-                          </div>
+        <main id="main">
+          <!-- 목록 페이지 -->
+          <s_list>
+            <div class="list-title">
+              <h2 class="title">[##_list_conform_##]</h2>
+            </div>
+            <ol>
+              <s_list_rep>
+                <li>
+                  <span class="date">[##_list_rep_regdate_##]</span>
+                  <a href="[##_list_rep_link_##]">[##_list_rep_title_##]</a>
+                  <div class="category">[##_article_rep_category_##]</div>
+                  <span class="cnt">[##_list_rep_rp_cnt_##]</span>
+                  <s_list_rep_thumbnail>
+                    <img src="[##_list_rep_thumbnail_##]" />
+                  </s_list_rep_thumbnail>
+                </li>
+              </s_list_rep>
+            </ol>
+          </s_list>
+          <!-- End : 목록 페이지 -->
 
-                          <div class="box_contents">
-                            <a
-                              href="[##_article_rep_link_##]"
-                              class="link_title"
-                              ><strong class="title_post"
-                                >[##_article_rep_title_##]</strong
-                              ></a
-                            >
-                            <div class="info_post">
-                              <a class="link_category thema_apply"
-                                ><span class="category"
-                                  >[##_article_rep_category_##]</span
-                                ></a
-                              >
-                              <span class="date">[##_article_rep_date_##]</span>
-                            </div>
-
-                            <a
-                              href="[##_article_rep_link_##]"
-                              class="link_article"
-                            >
-                              <p class="txt_post">
-                                [##_article_rep_summary_##]
-                              </p>
-                              <button
-                                type="button"
-                                class="btn_more thema_apply mobile_blind"
-                              >
-                                Read More
-                              </button>
-                            </a>
-                          </div>
-                        </div>
-                      </li>
-                    </s_index_article_rep>
-
-                    <s_permalink_article_rep>
-                      <li class="category_content_area">
-                        <div class="area_view_content">
-                          <!-- 상세 페이지 -->
-                          <div class="article_content">
-                            <div class="info_post">
-                              <a
-                                href="[##_article_rep_link_##]"
-                                class="link_title"
-                              >
-                                <div class="title_view">
-                                  [##_article_rep_title_##]
-                                </div>
-                              </a>
-                              <div class="view_info_post">
-                                <a
-                                  href="[##_article_rep_category_link_##]"
-                                  class="link_category thema_apply"
-                                  ><span class="category"
-                                    >[##_article_rep_category_##]</span
-                                  ></a
-                                >
-                                <span class="date"
-                                  >[##_article_rep_date_##]</span
-                                >
-                                [##_s_ad_isolation_##]
-                              </div>
-                            </div>
-
-                            <!-- 본문 내용 영역 -->
-                            <div class="article_view" id="article-view">
-                              [##_article_rep_desc_##]
-                            </div>
-                            <!-- End : 본문 내용 영역 -->
-
-                            <!-- 태그 -->
-                            <s_tag_label>
-                              <!-- area_tag -->
-                              <div class="area_tag">
-                                <h2 class="title_tag">TAG</h2>
-                                <div class="tag_content">
-                                  [##_tag_label_rep_##]
-                                </div>
-                              </div>
-                              <!-- // area_tag -->
-                            </s_tag_label>
-                            <!-- End : 태그 -->
-
-                            <!-- 댓글 영역 -->
-                            <div class="area_reply">
-                              <s_rp> [##_comment_group_##] </s_rp>
-                            </div>
-                            <!-- End : 댓글 영역 -->
-                          </div>
-                          <!-- End : 상세 페이지 -->
-                        </div>
-                      </li>
-                    </s_permalink_article_rep>
-                  </s_article_rep>
-                </ul>
-              </div>
-
-              <!-- 보호글 -->
-              <s_article_protected>
-                <!-- 보호글이 목록에 포함되어 있을 때 리스트 -->
-                <s_index_article_rep>
-                  <div
-                    class="category_list index_type_common index_type_horizontal"
-                  >
-                    <ul class="list_horizontal">
-                      <li class="list_horizontal_item">
-                        <div class="article_content">
-                          <div class="box_contents">
-                            <a
-                              href="[##_article_rep_link_##]"
-                              class="link_title"
-                              ><strong class="title_view"
-                                >[##_article_rep_title_##]</strong
-                              ></a
-                            >
-                            <div class="info_post">
-                              <a class="link_category thema_apply"
-                                ><span class="category">보호글</span></a
-                              >
-                              <span class="date">[##_article_rep_date_##]</span>
-                            </div>
-                            <a
-                              href="[##_article_rep_link_##]"
-                              class="link_article"
-                            >
-                              <p class="txt_post">보호되어 있는 글입니다.</p>
-                              <button
-                                type="button"
-                                class="btn_more thema_apply mobile_blind"
-                              >
-                                Read More
-                              </button>
-                            </a>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </s_index_article_rep>
-                <!-- End : 보호글이 목록에 포함되어 있을 때 리스트 -->
-                <!-- 비밀번호 입력 전 상세 페이지 -->
-                <s_permalink_article_rep>
+          <!-- 게시글 상세 -->
+          <s_article_rep>
+            <s_permalink_article_rep>
+              <div class="article-viewer">
+                <div class="category_content_area">
                   <div class="area_view_content">
+                    <!-- 상세 페이지 -->
                     <div class="article_content">
                       <div class="info_post">
-                        <a href="[##_article_rep_link_##]" class="link_title"
-                          ><strong class="title_view"
-                            >[##_article_rep_title_##]</strong
-                          ></a
-                        >
-                        <a
-                          href="[##_article_rep_category_link_##]"
-                          class="link_category thema_apply"
-                          ><span class="category"
-                            >[##_article_rep_category_##]</span
-                          ></a
-                        >
-                        <span class="date">[##_article_rep_date_##]</span>
+                        <a href="[##_article_rep_link_##]" class="link_title">
+                          <div class="title_view">
+                            [##_article_rep_title_##]
+                          </div>
+                        </a>
+                        <div class="view_info_post">
+                          <a
+                            href="[##_article_rep_category_link_##]"
+                            class="link_category thema_apply"
+                            ><span class="category"
+                              >[##_article_rep_category_##]</span
+                            ></a
+                          >
+                          <span class="date">[##_article_rep_date_##]</span>
+                          [##_s_ad_isolation_##]
+                        </div>
                       </div>
+
                       <!-- 본문 내용 영역 -->
-                      <div class="article_view">
-                        <!-- 본문 내용 (치환자 적용 영역) -->
-                        <form
-                          class="protected_form"
-                          onsubmit="[##_article_dissolve_##]"
-                        >
-                          <p>
-                            보호되어 있는 글입니다. 내용을 보시려면 비밀번호를
-                            입력하세요.
-                          </p>
-                          <input
-                            type="password"
-                            id="[##_article_password_##]"
-                            name="[##_article_password_##]"
-                            value=""
-                            placeholder="비밀번호"
-                          />
-                          <button type="submit">확인</button>
-                        </form>
+                      <div class="article_view" id="article-view">
+                        [##_article_rep_desc_##]
                       </div>
-                    </div>
-                  </div>
-                </s_permalink_article_rep>
-                <!-- End : 비밀번호 입력 전 상세 페이지 -->
-              </s_article_protected>
-              <!-- End : 보호글 -->
+                      <!-- End : 본문 내용 영역 -->
 
-              <!-- 태그 페이지 (/tag) -->
-              <s_tag>
-                <div class="box_tag_trail">
-                  <h3 class="title_category">태그</h3>
-                  <div class="tag_cont">
-                    <!-- 마지막 콤마(,) 를 javascript 로 지워줘야 하나. by osh -->
-                    <s_tag_rep>
-                      <a href="[##_tag_link_##]" class="[##_tag_class_##]"
-                        >[##_tag_name_##]</a
-                      >,
-                    </s_tag_rep>
+                      <!-- 태그 -->
+                      <s_tag_label>
+                        <!-- area_tag -->
+                        <div class="area_tag">
+                          <h2 class="title_tag">TAG</h2>
+                          <div class="tag_content">[##_tag_label_rep_##]</div>
+                        </div>
+                        <!-- // area_tag -->
+                      </s_tag_label>
+                      <!-- End : 태그 -->
+
+                      <!-- 댓글 영역 -->
+                      <div class="area_reply">
+                        <s_rp> [##_comment_group_##] </s_rp>
+                      </div>
+                      <!-- End : 댓글 영역 -->
+                    </div>
+                    <!-- End : 상세 페이지 -->
                   </div>
                 </div>
-              </s_tag>
-              <!-- End : 태그 페이지 (/tag) -->
+              </div>
+            </s_permalink_article_rep>
+          </s_article_rep>
+          <!-- End : 게시글 상세 -->
 
-              <!-- 방명록 페이지 (/guestbook) -->
-              <s_guest>
-                <div class="area_view_content">[##_guestbook_group_##]</div>
-              </s_guest>
-              <!-- End : 방명록 페이지 (/guestbook) -->
-
-              <!-- 페이지네이션 -->
-              <s_paging>
-                <!-- area_paging -->
-                <div class="area_paging">
-                  <div class="inner_paging thema_apply">
-                    <a
-                      [##_prev_page_##]
-                      class="link_page link_prev [##_no_more_prev_##]"
-                      ><span class="icon-Keyboard-Arrow---Left"></span
-                      ><span class="blind">이전</span></a
-                    >
-                    <div class="paging_num">
-                      <s_paging_rep>
-                        <a [##_paging_rep_link_##] class="link_num"
-                          >[##_paging_rep_link_num_##]</a
-                        >
-                      </s_paging_rep>
-                    </div>
-                    <a
-                      [##_next_page_##]
-                      class="link_page link_next [##_no_more_next_##]"
-                      ><span class="blind">다음</span
-                      ><span class="icon-Keyboard-Arrow---Right"></span
-                    ></a>
-                  </div>
-                </div>
-                <!-- // area_paging -->
-              </s_paging>
-              <!-- End : 페이지네이션 -->
+          <!-- 태그 페이지 (/tag) -->
+          <s_tag>
+            <div class="box_tag_trail">
+              <h3 class="title_category">태그</h3>
+              <div class="tag_cont">
+                <!-- 마지막 콤마(,) 를 javascript 로 지워줘야 하나. by osh -->
+                <s_tag_rep>
+                  <a href="[##_tag_link_##]" class="[##_tag_class_##]"
+                    >[##_tag_name_##]</a
+                  >,
+                </s_tag_rep>
+              </div>
             </div>
-          </main>
+          </s_tag>
+          <!-- End : 태그 페이지 (/tag) -->
 
-          [##_revenue_list_lower_##]
-          <footer id="footer">[##_var_footerCopyright_##]</footer>
-        </div>
+          <!-- 방명록 페이지 (/guestbook) -->
+          <s_guest>
+            <div class="guestbook">[##_guestbook_group_##]</div>
+          </s_guest>
+          <!-- End : 방명록 페이지 (/guestbook) -->
+
+          <!-- 페이지네이션 -->
+          <s_paging>
+            <!-- area_paging -->
+            <div class="pagination">
+              <div class="center">
+                <a
+                  [##_prev_page_##]
+                  class="link_page link_prev [##_no_more_prev_##]"
+                  ><span class="icon-Keyboard-Arrow---Left"></span
+                  ><span class="blind">이전</span></a
+                >
+                <div class="paging_num">
+                  <s_paging_rep>
+                    <a [##_paging_rep_link_##] class="link_num"
+                      >[##_paging_rep_link_num_##]</a
+                    >
+                  </s_paging_rep>
+                </div>
+                <a
+                  [##_next_page_##]
+                  class="link_page link_next [##_no_more_next_##]"
+                  ><span class="blind">다음</span
+                  ><span class="icon-Keyboard-Arrow---Right"></span
+                ></a>
+              </div>
+            </div>
+            <!-- // area_paging -->
+          </s_paging>
+          <!-- End : 페이지네이션 -->
+        </main>
+
+        <footer id="footer">
+          <p class="copyright">[##_var_footerCopyright_##]</p>
+        </footer>
       </div>
     </s_t3>
   </body>

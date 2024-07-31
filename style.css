@@ -375,8 +375,6 @@ input:-webkit-autofill:active {
 }
 #main .article-viewer .article-tag {
   margin-top: 50px;
-  display: flex;
-  align-items: center;
   -moz-column-gap: 12px;
        column-gap: 12px;
 }
@@ -385,7 +383,12 @@ input:-webkit-autofill:active {
   font-size: 18px;
 }
 #main .article-viewer .article-tag .tags {
+  margin-top: 12px;
   display: flex;
+  flex-wrap: wrap;
+}
+#main .article-viewer .article-tag .tags a {
+  white-space: nowrap;
 }
 #main .article-viewer .article-tag .tags a:before {
   content: "#";

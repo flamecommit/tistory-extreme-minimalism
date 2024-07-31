@@ -366,16 +366,17 @@ input:-webkit-autofill:active {
     }
     .article-tag {
       margin-top: 50px;
-      display: flex;
-      align-items: center;
       column-gap: 12px;
       .title {
         font-weight: 700;
         font-size: 18px;
       }
       .tags {
+        margin-top: 12px;
         display: flex;
+        flex-wrap: wrap;
         a {
+          white-space: nowrap;
           &:before {
             content: "#";
           }

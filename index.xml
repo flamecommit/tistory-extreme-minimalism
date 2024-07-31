@@ -71,41 +71,12 @@
 			<default></default>
 		</variable>
 		<variable>
-			<name>penelopeColorSet</name>
-			<label>컬러셋</label>
-			<description></description>
-			<type>SELECT</type>
-			<option><![CDATA[
-				[
-					{"name":"thema_aqua", "label":"아쿠아(기본)", "value":"thema_aqua"},
-					{"name":"thema_blue", "label":"블루", "value":"thema_blue"},
-					{"name":"thema_black", "label":"블랙", "value":"thema_black"},
-					{"name":"thema_purple", "label":"퍼플", "value":"thema_purple"},
-					{"name":"thema_orange", "label":"오렌지", "value":"thema_orange"}
-				]
-			]]></option>
-			<default>thema_aqua</default>
-		</variable>
-		<variable>
-			<name>penelopeListType</name>
-			<label>글 목록 형태</label>
-			<description></description>
-			<type>SELECT</type>
-			<option><![CDATA[
-				[
-					{"name":"horizontal", "label":"기본형", "value":"horizontal"},
-					{"name":"gallery", "label":"갤러리", "value":"gallery"}
-				]
-			]]></option>
-			<default>horizontal</default>
-		</variable>
-		<variable>
 			<name>footerCopyright</name>
 			<label>하단 카피라이트</label>
 			<description></description>
 			<type>STRING</type>
 			<option></option>
-			<default>Designed by Tistory.</default>
+			<default>Designed by 신과장.</default>
 		</variable>
 		<variable>
 			<name>snsFacebook</name>

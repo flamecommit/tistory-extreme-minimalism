@@ -13,8 +13,9 @@
   font-display: swap;
 }
 
-$orange: #f75b00;
-$brightOrange: #f7a000;
+$primaryColor: #f75b00;
+$brightColor: #f7a000;
+$thumbnailShadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
 
 *,
 ::before,
@@ -113,7 +114,7 @@ input:-webkit-autofill:active {
       font-weight: 700;
       font-size: 20px;
       &:hover {
-        color: $orange;
+        color: $primaryColor;
       }
     }
   }
@@ -134,7 +135,7 @@ input:-webkit-autofill:active {
         mask-image: url(./images/search.svg);
       }
       &:hover {
-        background-color: $orange;
+        background-color: $primaryColor;
       }
     }
   }
@@ -190,7 +191,7 @@ input:-webkit-autofill:active {
         > a {
           font-size: 26px;
           &:hover {
-            color: $brightOrange;
+            color: $brightColor;
           }
         }
       }
@@ -203,7 +204,7 @@ input:-webkit-autofill:active {
         > a {
           font-size: 16px;
           &:hover {
-            color: $brightOrange;
+            color: $brightColor;
           }
         }
       }
@@ -268,7 +269,7 @@ input:-webkit-autofill:active {
       mask-size: 60px;
       background-color: #fff;
       &:hover {
-        background-color: $brightOrange;
+        background-color: $brightColor;
       }
     }
   }
@@ -289,7 +290,7 @@ input:-webkit-autofill:active {
       font-size: 18px;
       .count {
         font-size: 16px;
-        color: $orange;
+        color: $primaryColor;
       }
     }
   }
@@ -308,6 +309,7 @@ input:-webkit-autofill:active {
         height: 120px;
         background-color: #f7f7f7;
         border-radius: 12px;
+        box-shadow: $thumbnailShadow;
         img {
           position: relative;
           z-index: 1;
@@ -335,7 +337,7 @@ input:-webkit-autofill:active {
             font-weight: 700;
             font-size: 20px;
             &:hover {
-              color: $orange;
+              color: $primaryColor;
             }
           }
         }
@@ -344,7 +346,7 @@ input:-webkit-autofill:active {
           a {
             font-size: 14px;
             &:hover {
-              color: $orange;
+              color: $primaryColor;
             }
           }
         }
@@ -370,7 +372,7 @@ input:-webkit-autofill:active {
         margin-top: 12px;
         a {
           &:hover {
-            color: $orange;
+            color: $primaryColor;
           }
         }
       }
@@ -403,7 +405,7 @@ input:-webkit-autofill:active {
             margin-left: 4px;
           }
           &:hover {
-            color: $orange;
+            color: $primaryColor;
           }
         }
       }
@@ -421,7 +423,7 @@ input:-webkit-autofill:active {
         }
         a {
           &:hover {
-            color: $orange;
+            color: $primaryColor;
           }
         }
       }
@@ -429,9 +431,9 @@ input:-webkit-autofill:active {
         overflow-x: auto;
         font-size: 0;
         white-space: nowrap;
-        padding-bottom: 6px;
+        padding: 6px 4px;
         .related-item {
-          width: 180px;
+          width: 178px;
           display: inline-block;
           &:not(:first-child) {
             margin-left: 16px;
@@ -441,7 +443,7 @@ input:-webkit-autofill:active {
             text-align: center;
             font-size: 16px;
             &:hover {
-              color: $orange;
+              color: $primaryColor;
             }
           }
           .thumbnail {
@@ -452,6 +454,7 @@ input:-webkit-autofill:active {
             height: 114px;
             background-color: #f7f7f7;
             border-radius: 6px;
+            box-shadow: $thumbnailShadow;
             img {
               position: relative;
               z-index: 1;
@@ -612,7 +615,7 @@ input:-webkit-autofill:active {
     justify-content: center;
     cursor: pointer;
     &:hover {
-      color: $orange;
+      color: $primaryColor;
     }
   }
   .pager {
@@ -630,7 +633,7 @@ input:-webkit-autofill:active {
       transform: rotate(180deg);
     }
     &:hover {
-      background-color: $orange;
+      background-color: $primaryColor;
     }
     &.no-more-prev,
     &.no-more-next {

@@ -25,15 +25,29 @@
     <s_t3>
       <div id="wrapper">
         <header id="header">
-          <div class="inner-header">
+          <div class="inner">
             <h1 class="logo">
               <a href="[##_blog_link_##]">
                 <!-- <s_var_logoImage /> -->
                 [##_title_##]
               </a>
             </h1>
-            <button type="button" class="drawer-opener">메뉴</button>
-            <button type="button" class="search-opener">검색</button>
+            <div class="btn-area">
+              <button
+                type="button"
+                class="drawer-opener"
+                onclick="UI.openDrawer()"
+              >
+                메뉴
+              </button>
+              <button
+                type="button"
+                class="search-opener"
+                onclick="$('#search').toggleClass('on')"
+              >
+                검색
+              </button>
+            </div>
           </div>
         </header>
 

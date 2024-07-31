@@ -41,24 +41,9 @@
 	</default>
 	<cover>
 		<item>
-			<name>post1</name>
+			<name>X</name>
 			<label><![CDATA[ 메인 리스트 ]]></label>
 			<description><![CDATA[ 블로그 형태로 출력합니다. 내용을 출력합니다. ]]></description>
-		</item>
-		<item>
-			<name>gallery</name>
-			<label><![CDATA[ 섬네일 리스트 ]]></label>
-			<description><![CDATA[ 정사각형 썸네일 목록을 출력합니다. 4개 목록에 최적화 되어있습니다. ]]></description>
-		</item>
-		<item>
-			<name>horizontal</name>
-			<label><![CDATA[ 리스트 ]]></label>
-			<description><![CDATA[ 사진과 제목, 내용을 가로로 출력합니다.]]></description>
-		</item>
-		<item>
-			<name>blind</name>
-			<label><![CDATA[ 갤러리 ]]></label>
-			<description><![CDATA[ 대표사진을 배경으로 한 목록을 출력합니다. ]]></description>
 		</item>
 	</cover>
 	<variables>
@@ -69,38 +54,6 @@
 			<type>IMAGE</type>
 			<option></option>
 			<default></default>
-		</variable>
-		<variable>
-			<name>footerCopyright</name>
-			<label>하단 카피라이트</label>
-			<description></description>
-			<type>STRING</type>
-			<option></option>
-			<default>Designed by 신과장.</default>
-		</variable>
-		<variable>
-			<name>snsFacebook</name>
-			<label>페이스북 링크</label>
-			<description></description>
-			<type>STRING</type>
-			<option></option>
-			<default></default>
-		</variable>
-		<variable>
-			<name>snsTwitter</name>
-			<label>트위터 링크</label>
-			<description></description>
-			<type>STRING</type>
-			<option></option>
-			<default>#</default>
-		</variable>
-		<variable>
-			<name>snsInstagram</name>
-			<label>인스타그램 링크</label>
-			<description></description>
-			<type>STRING</type>
-			<option></option>
-			<default>#</default>
 		</variable>
 	</variables>
 </skin>

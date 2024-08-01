@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>[##_page_title_##] :: [##_title_##]</title>
+    <meta name="title" content="[##_page_title_##] :: [##_title_##]" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="[##_title_##]"
+      href="[##_rss_url_##]"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./images/jquery-3.7.1.slim.min.js"></script>
+  </head>
+
+  <body id="[##_body_id_##]">
+    <s_t3>
+      <script>
+        const UI = {
+          openDrawer: function () {
+            $("body").addClass("scroll-lock");
+            $("#drawer").addClass("on");
+          },
+          closeDrawer: function () {
+            $("body").removeClass("scroll-lock");
+            $("#drawer").removeClass("on");
+          },
+          openSearch: function () {
+            $("body").addClass("scroll-lock");
+            $("#search").addClass("on");
+            $('#search input[type="search"]').val("");
+            $('#search input[type="search"]').focus();
+          },
+          closeSearch: function () {
+            $("body").removeClass("scroll-lock");
+            $("#search").removeClass("on");
+          },
+        };
+
+        $(document).ready(() => {
+          $("#drawer").on("click", function (e) {
+            if (e.currentTarget === e.target) {
+              UI.closeDrawer();
+            }
+          });
+          $("#search").on("click", function (e) {
+            if (e.currentTarget === e.target) {
+              UI.closeSearch();
+            }
+          });
+        });
+      </script>
+      <div id="wrapper">
+        <header id="header">
+          <div class="inner">
+            <h1 class="logo">
+              <a href="[##_blog_link_##]">
+                <!-- <s_var_logoImage /> -->
+                [##_title_##]
+              </a>
+            </h1>
+            <div class="btn-area">
+              <button
+                type="button"
+                class="drawer-opener"
+                onclick="UI.openDrawer()"
+              >
+                메뉴
+              </button>
+              <button
+                type="button"
+                class="search-opener"
+                onclick="UI.openSearch()"
+              >
+                검색
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <div id="drawer">
+          <nav class="gnb">[##_category_list_##]</nav>
+        </div>
+
+        <div id="search">
+          <form action="" method="get">
+            <s_search>
+              <div class="search-box">
+                <input
+                  type="search"
+                  name="[##_search_name_##]"
+                  placeholder="Search"
+                  value="[##_search_text_##]"
+                  onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }"
+                />
+                <button
+                  type="button"
+                  class="btn-search"
+                  onclick="[##_search_onclick_submit_##]"
+                >
+                  검색
+                </button>
+              </div>
+            </s_search>
+          </form>
+        </div>
+
+        <main id="main">
+          <!-- 목록 페이지 -->
+          <s_list>
+            <div class="list-header">
+              <h2>
+                [##_list_conform_##]
+                <span class="count">([##_list_count_##])</span>
+              </h2>
+            </div>
+          </s_list>
+          <!-- End : 목록 페이지 -->
+
+          <!-- 일반 게시글 -->
+          <s_article_rep>
+            <s_index_article_rep>
+              <div class="article-item">
+                <a href="[##_article_rep_link_##]" class="thumbnail">
+                  <s_list_rep_thumbnail>
+                    <img src="[##_article_rep_thumbnail_url_##]" alt="" />
+                  </s_list_rep_thumbnail>
+                </a>
+                <div class="info">
+                  <div class="title">
+                    <a href="[##_article_rep_link_##]" class="title"
+                      >[##_article_rep_title_##]</a
+                    >
+                  </div>
+                  <div class="category">
+                    <a href="[##_article_rep_category_link_##]" class="category"
+                      >[##_article_rep_category_##]</a
+                    >
+                  </div>
+                  <div class="date">[##_article_rep_date_##]</div>
+                </div>
+              </div>
+            </s_index_article_rep>
+            <s_permalink_article_rep>
+              <div class="article-viewer">
+                <div class="article-header">
+                  <div class="title">[##_article_rep_title_##]</div>
+                  <div class="category">
+                    <a href="[##_article_rep_category_link_##]"
+                      >[##_article_rep_category_##]</a
+                    >
+                  </div>
+                  <div class="date">[##_article_rep_date_##]</div>
+                </div>
+
+                <!-- 본문 내용 영역 -->
+                <article id="article" class="article">
+                  [##_article_rep_desc_##]
+                </article>
+                <!-- End : 본문 내용 영역 -->
+
+                <!-- 태그 -->
+                <s_tag_label>
+                  <div class="article-tag">
+                    <h3 class="title">TAG</h3>
+                    <div class="tags">[##_tag_label_rep_##]</div>
+                  </div>
+                </s_tag_label>
+                <!-- End : 태그 -->
+
+                <!-- 관련글 -->
+                <s_article_related>
+                  <!-- related_type_view -->
+                  <div class="related-area">
+                    <div class="related-header">
+                      <h3>관련글</h3>
+                      <a href="[##_article_rep_category_link_##]"
+                        >관련글 더보기</a
+                      >
+                    </div>
+                    <div class="related-list">
+                      <s_article_related_rep>
+                        <div class="related-item">
+                          <a href="[##_article_related_rep_link_##]">
+                            <div class="thumbnail">
+                              <s_article_related_rep_thumbnail>
+                                <img
+                                  src="[##_article_related_rep_thumbnail_link_##]"
+                                  alt=""
+                                />
+                              </s_article_related_rep_thumbnail>
+                            </div>
+                            <div class="title">
+                              [##_article_related_rep_title_##]
+                            </div>
+                          </a>
+                        </div>
+                      </s_article_related_rep>
+                    </div>
+                  </div>
+                  <!-- // related_type_view -->
+                </s_article_related>
+                <!-- End : 관련글 -->
+
+                <!-- 댓글 영역 -->
+                <s_rp>
+                  <div class="article-reply">[##_comment_group_##]</div>
+                </s_rp>
+                <!-- End : 댓글 영역 -->
+              </div>
+            </s_permalink_article_rep>
+          </s_article_rep>
+          <!-- End : 일반 게시글 -->
+
+          <!-- 보호글 -->
+          <s_article_protected>
+            <s_index_article_rep>
+              <div class="article-item">
+                <a href="[##_article_rep_link_##]" class="thumbnail">
+                  [보호글 이미지]
+                </a>
+                <div class="info">
+                  <div class="title">
+                    <a href="[##_article_rep_link_##]" class="title"
+                      >[##_article_rep_title_##]</a
+                    >
+                  </div>
+                  <div class="category">
+                    <a href="[##_article_rep_category_link_##]" class="category"
+                      >[##_article_rep_category_##]</a
+                    >
+                  </div>
+                  <div class="date">[##_article_rep_date_##]</div>
+                </div>
+              </div>
+            </s_index_article_rep>
+            <s_permalink_article_rep>
+              <div class="article-viewer">
+                <div class="article-header">
+                  <div class="title">[##_article_rep_title_##]</div>
+                  <div class="category">
+                    <a href="[##_article_rep_category_link_##]"
+                      >[##_article_rep_category_##]</a
+                    >
+                  </div>
+                  <div class="date">[##_article_rep_date_##]</div>
+                </div>
+
+                <!-- 본문 내용 영역 -->
+                <article id="protect">
+                  <form
+                    class="protected_form"
+                    onsubmit="[##_article_dissolve_##]"
+                  >
+                    <p>
+                      보호되어 있는 글입니다. 내용을 보시려면 비밀번호를
+                      입력하세요.
+                    </p>
+                    <input
+                      type="password"
+                      id="[##_article_password_##]"
+                      name="[##_article_password_##]"
+                      value=""
+                      placeholder="비밀번호"
+                    />
+                    <button type="submit">확인</button>
+                  </form>
+                </article>
+                <!-- End : 본문 내용 영역 -->
+              </div>
+            </s_permalink_article_rep>
+          </s_article_protected>
+          <!-- End : 보호글 -->
+
+          <!-- 태그 페이지 (/tag) -->
+          <s_tag>
+            <div class="box_tag_trail">
+              <h3 class="title_category">태그</h3>
+              <div class="tag_cont">
+                <!-- 마지막 콤마(,) 를 javascript 로 지워줘야 하나. by osh -->
+                <s_tag_rep>
+                  <a href="[##_tag_link_##]" class="[##_tag_class_##]"
+                    >[##_tag_name_##]</a
+                  >,
+                </s_tag_rep>
+              </div>
+            </div>
+          </s_tag>
+          <!-- End : 태그 페이지 (/tag) -->
+
+          <!-- 방명록 페이지 (/guestbook) -->
+          <s_guest>
+            <div class="guestbook">[##_guestbook_group_##]</div>
+          </s_guest>
+          <!-- End : 방명록 페이지 (/guestbook) -->
+
+          <!-- 페이지네이션 -->
+          <s_paging>
+            <div id="pagination">
+              <a [##_prev_page_##] class="arrow prev [##_no_more_prev_##]"
+                >이전</a
+              >
+              <div class="pager">
+                <s_paging_rep>
+                  <a [##_paging_rep_link_##]>[##_paging_rep_link_num_##]</a>
+                </s_paging_rep>
+              </div>
+              <a [##_next_page_##] class="arrow next [##_no_more_next_##]"
+                >다음</a
+              >
+            </div>
+          </s_paging>
+          <!-- End : 페이지네이션 -->
+        </main>
+
+        <footer id="footer">
+          <p class="copyright">
+            Designed by
+            <a href="https://shinsplan.tistory.com/" target="_blank">신과장</a>.
+            ©️ All rights reserved.
+          </p>
+        </footer>
+      </div>
+    </s_t3>
+  </body>
+</html>

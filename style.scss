@@ -665,11 +665,16 @@ input:-webkit-autofill:active {
 
 #footer {
   margin-top: auto;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   border-top: 1px solid #eee;
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    max-width: 1024px;
+    padding: 20px;
+    margin-inline: auto;
+  }
   .blog-menu {
     ul {
       display: flex;

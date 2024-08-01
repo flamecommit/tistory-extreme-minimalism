@@ -41,6 +41,16 @@
             $("body").removeClass("scroll-lock");
             $("#search").removeClass("on");
           },
+          openProtect: function () {
+            $("body").addClass("scroll-lock");
+            $("#protect").addClass("on");
+            $('#protect input[type="password"]').val("");
+            $('#protect input[type="password"]').focus();
+          },
+          closeProtect: function () {
+            $("body").removeClass("scroll-lock");
+            $("#protect").removeClass("on");
+          },
         };
 
         $(document).ready(() => {
@@ -52,6 +62,11 @@
           $("#search").on("click", function (e) {
             if (e.currentTarget === e.target) {
               UI.closeSearch();
+            }
+          });
+          $("#protect").on("click", function (e) {
+            if (e.currentTarget === e.target) {
+              UI.closeProtect();
             }
           });
         });
@@ -256,26 +271,32 @@
                   </div>
 
                   <!-- 본문 내용 영역 -->
-                  <article id="protect">
-                    <form
-                      class="protected_form"
-                      onsubmit="[##_article_dissolve_##]"
+                  <div class="protect-notice">
+                    <div class="text">보호되어 있는 글입니다.</div>
+                    <button
+                      type="button"
+                      class="password-opener"
+                      onclick="UI.openProtect()"
                     >
-                      <div class="notice">
-                        보호되어 있는 글입니다. 내용을 보시려면 비밀번호를
-                        입력하세요.
-                      </div>
+                      내용 보기
+                    </button>
+                  </div>
+                  <!-- End : 본문 내용 영역 -->
+                </div>
+
+                <article id="protect">
+                  <form onsubmit="[##_article_dissolve_##]">
+                    <div class="password-box">
                       <input
                         type="password"
                         id="[##_article_password_##]"
                         name="[##_article_password_##]"
-                        placeholder="비밀번호"
+                        placeholder="Password"
                       />
-                      <button type="submit">확인</button>
-                    </form>
-                  </article>
-                  <!-- End : 본문 내용 영역 -->
-                </div>
+                      <button type="submit" class="btn-unlock">확인</button>
+                    </div>
+                  </form>
+                </article>
               </s_permalink_article_rep>
             </s_article_protected>
           </div>

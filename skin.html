@@ -164,7 +164,7 @@
                 </div>
               </s_index_article_rep>
               <s_permalink_article_rep>
-                <div class="article-viewer">
+                <div id="article">
                   <div class="article-header">
                     <div class="title">[##_article_rep_title_##]</div>
                     <div class="category">
@@ -176,59 +176,61 @@
                   </div>
 
                   <!-- 본문 내용 영역 -->
-                  <article id="article" class="article">
+                  <article class="article-viewer">
                     [##_article_rep_desc_##]
                   </article>
                   <!-- End : 본문 내용 영역 -->
 
-                  <!-- 태그 -->
-                  <s_tag_label>
-                    <div class="article-tag">
-                      <h3 class="title">TAG</h3>
-                      <div class="tags">[##_tag_label_rep_##]</div>
-                    </div>
-                  </s_tag_label>
-                  <!-- End : 태그 -->
-
-                  <!-- 관련글 -->
-                  <s_article_related>
-                    <!-- related_type_view -->
-                    <div class="related-area">
-                      <div class="related-header">
-                        <h3>관련글</h3>
-                        <a href="[##_article_rep_category_link_##]"
-                          >관련글 더보기</a
-                        >
+                  <div class="article-footer">
+                    <!-- 태그 -->
+                    <s_tag_label>
+                      <div class="article-tag">
+                        <h3 class="title">TAG</h3>
+                        <div class="tags">[##_tag_label_rep_##]</div>
                       </div>
-                      <div class="related-list">
-                        <s_article_related_rep>
-                          <div class="related-item">
-                            <a href="[##_article_related_rep_link_##]">
-                              <div class="thumbnail">
-                                <s_article_related_rep_thumbnail>
-                                  <img
-                                    src="[##_article_related_rep_thumbnail_link_##]"
-                                    alt=""
-                                  />
-                                </s_article_related_rep_thumbnail>
-                              </div>
-                              <div class="title">
-                                [##_article_related_rep_title_##]
-                              </div>
-                            </a>
-                          </div>
-                        </s_article_related_rep>
-                      </div>
-                    </div>
-                    <!-- // related_type_view -->
-                  </s_article_related>
-                  <!-- End : 관련글 -->
+                    </s_tag_label>
+                    <!-- End : 태그 -->
 
-                  <!-- 댓글 영역 -->
-                  <s_rp>
-                    <div class="article-reply">[##_comment_group_##]</div>
-                  </s_rp>
-                  <!-- End : 댓글 영역 -->
+                    <!-- 관련글 -->
+                    <s_article_related>
+                      <!-- related_type_view -->
+                      <div class="related-area">
+                        <div class="related-header">
+                          <h3>관련글</h3>
+                          <a href="[##_article_rep_category_link_##]"
+                            >관련글 더보기</a
+                          >
+                        </div>
+                        <div class="related-list">
+                          <s_article_related_rep>
+                            <div class="related-item">
+                              <a href="[##_article_related_rep_link_##]">
+                                <div class="thumbnail">
+                                  <s_article_related_rep_thumbnail>
+                                    <img
+                                      src="[##_article_related_rep_thumbnail_link_##]"
+                                      alt=""
+                                    />
+                                  </s_article_related_rep_thumbnail>
+                                </div>
+                                <div class="title">
+                                  [##_article_related_rep_title_##]
+                                </div>
+                              </a>
+                            </div>
+                          </s_article_related_rep>
+                        </div>
+                      </div>
+                      <!-- // related_type_view -->
+                    </s_article_related>
+                    <!-- End : 관련글 -->
+
+                    <!-- 댓글 영역 -->
+                    <s_rp>
+                      <div class="article-reply">[##_comment_group_##]</div>
+                    </s_rp>
+                    <!-- End : 댓글 영역 -->
+                  </div>
                 </div>
               </s_permalink_article_rep>
             </s_article_rep>
@@ -259,7 +261,7 @@
                 </div>
               </s_index_article_rep>
               <s_permalink_article_rep>
-                <div class="article-viewer">
+                <div id="article">
                   <div class="article-header">
                     <div class="title">[##_article_rep_title_##]</div>
                     <div class="category">

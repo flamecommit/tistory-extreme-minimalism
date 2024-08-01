@@ -1,5 +1,12 @@
 ### Releases Note
 
+v1.3.0
+
+- Footer의 최대 가로값 적용 (1024px)
+- 보호글 Password 입력 폼 디자인
+- Pretendard Medium 굵기 추가
+- 게시글 공감, 공유, 신고 버튼 활성화
+
 v1.2.0
 
 - Footer 좌측 블로그 메뉴 추가

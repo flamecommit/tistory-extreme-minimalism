@@ -500,6 +500,10 @@ input:-webkit-autofill:active {
       padding: 6px 12px;
       background-color: #f7f7f7;
       border-radius: 6px;
+      &:hover {
+        background-color: $primaryColor;
+        color: #ffffff;
+      }
     }
   }
 }

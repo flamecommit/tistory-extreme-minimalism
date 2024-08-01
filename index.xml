@@ -46,14 +46,4 @@
 			<description><![CDATA[ 블로그 형태로 출력합니다. 내용을 출력합니다. ]]></description>
 		</item>
 	</cover>
-	<variables>
-		<variable>
-			<name>footerCopyright</name>
-			<label>하단 카피라이트</label>
-			<description></description>
-			<type>STRING</type>
-			<option></option>
-			<default>Designed by 신과장.</default>
-		</variable>
-	</variables>
 </skin>

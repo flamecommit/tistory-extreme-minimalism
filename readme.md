@@ -1,5 +1,10 @@
 ### Releases Note
 
+v1.1.0
+
+- 보호글 마크업 추가
+- Copyright 변수 제거
+
 v1.0.1
 
 - Footer 카피라이트 변수 적용

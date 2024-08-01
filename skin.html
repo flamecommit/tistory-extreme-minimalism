@@ -112,156 +112,172 @@
         </div>
 
         <main id="main">
-          <!-- 목록 페이지 -->
           <s_list>
-            <div class="list-page">
-              <div class="list-header">
-                <h2>
-                  [##_list_conform_##]
-                  <span class="count">([##_list_count_##])</span>
-                </h2>
-              </div>
-              <div class="article-list">
-                <s_list_rep>
-                  <div class="article-item">
-                    <a href="[##_list_rep_link_##]" class="thumbnail">
-                      <s_list_rep_thumbnail>
-                        <img src="[##_list_rep_thumbnail_##]" alt="" />
-                      </s_list_rep_thumbnail>
-                    </a>
-                    <div class="info">
-                      <div class="title">
-                        <a href="[##_list_rep_link_##]" class="title"
-                          >[##_list_rep_title_##]</a
-                        >
-                      </div>
-                      <div class="category">
-                        <a
-                          href="[##_article_rep_category_link_##]"
-                          class="category"
-                          >[##_article_rep_category_##]</a
-                        >
-                      </div>
-                      <div class="date">[##_list_rep_regdate_##]</div>
-                    </div>
-                  </div>
-                </s_list_rep>
-              </div>
+            <div class="list-header">
+              <h2>
+                [##_list_conform_##]
+                <span class="count">([##_list_count_##])</span>
+              </h2>
             </div>
           </s_list>
-          <!-- End : 목록 페이지 -->
 
-          <!-- 게시글 상세 -->
-          <s_article_rep>
-            <s_permalink_article_rep>
-              <div class="article-viewer">
-                <div class="article-header">
-                  <div class="title">[##_article_rep_title_##]</div>
-                  <div class="category">
-                    <a href="[##_article_rep_category_link_##]"
-                      >[##_article_rep_category_##]</a
-                    >
-                  </div>
-                  <div class="date">[##_article_rep_date_##]</div>
-                </div>
-
-                <!-- 본문 내용 영역 -->
-                <article id="article" class="article">
-                  [##_article_rep_desc_##]
-                </article>
-                <!-- End : 본문 내용 영역 -->
-
-                <!-- 태그 -->
-                <s_tag_label>
-                  <div class="article-tag">
-                    <h3 class="title">TAG</h3>
-                    <div class="tags">[##_tag_label_rep_##]</div>
-                  </div>
-                </s_tag_label>
-                <!-- End : 태그 -->
-
-                <!-- 관련글 -->
-                <s_article_related>
-                  <!-- related_type_view -->
-                  <div class="related-area">
-                    <div class="related-header">
-                      <h3>관련글</h3>
-                      <a href="[##_article_rep_category_link_##]"
-                        >관련글 더보기</a
+          <div class="article-wrapper">
+            <s_article_rep>
+              <s_index_article_rep>
+                <div class="article-item">
+                  <a href="[##_article_rep_link_##]" class="thumbnail">
+                    <s_list_rep_thumbnail>
+                      <img src="[##_article_rep_thumbnail_url_##]" alt="" />
+                    </s_list_rep_thumbnail>
+                  </a>
+                  <div class="info">
+                    <div class="title">
+                      <a href="[##_article_rep_link_##]" class="title"
+                        >[##_article_rep_title_##]</a
                       >
                     </div>
-                    <div class="related-list">
-                      <s_article_related_rep>
-                        <div class="related-item">
-                          <a href="[##_article_related_rep_link_##]">
-                            <div class="thumbnail">
-                              <s_article_related_rep_thumbnail>
-                                <img
-                                  src="[##_article_related_rep_thumbnail_link_##]"
-                                  alt=""
-                                />
-                              </s_article_related_rep_thumbnail>
-                            </div>
-                            <div class="title">
-                              [##_article_related_rep_title_##]
-                            </div>
-                          </a>
-                        </div>
-                      </s_article_related_rep>
+                    <div class="category">
+                      <a
+                        href="[##_article_rep_category_link_##]"
+                        class="category"
+                        >[##_article_rep_category_##]</a
+                      >
                     </div>
+                    <div class="date">[##_article_rep_date_##]</div>
                   </div>
-                  <!-- // related_type_view -->
-                </s_article_related>
-                <!-- End : 관련글 -->
-
-                <!-- 댓글 영역 -->
-                <s_rp>
-                  <div class="article-reply">[##_comment_group_##]</div>
-                </s_rp>
-                <!-- End : 댓글 영역 -->
-              </div>
-            </s_permalink_article_rep>
-          </s_article_rep>
-          <!-- End : 게시글 상세 -->
-
-          <!-- 보호글 -->
-          <s_article_protected>
-            <s_permalink_article_rep>
-              <div class="article-viewer">
-                <div class="article-header">
-                  <div class="title">[##_article_rep_title_##]</div>
-                  <div class="category">
-                    <a href="[##_article_rep_category_link_##]"
-                      >[##_article_rep_category_##]</a
-                    >
-                  </div>
-                  <div class="date">[##_article_rep_date_##]</div>
                 </div>
+              </s_index_article_rep>
+              <s_permalink_article_rep>
+                <div class="article-viewer">
+                  <div class="article-header">
+                    <div class="title">[##_article_rep_title_##]</div>
+                    <div class="category">
+                      <a href="[##_article_rep_category_link_##]"
+                        >[##_article_rep_category_##]</a
+                      >
+                    </div>
+                    <div class="date">[##_article_rep_date_##]</div>
+                  </div>
 
-                <!-- 본문 내용 영역 -->
-                <article id="protect">
-                  <form
-                    class="protected_form"
-                    onsubmit="[##_article_dissolve_##]"
-                  >
-                    <p>
-                      보호되어 있는 글입니다. 내용을 보시려면 비밀번호를
-                      입력하세요.
-                    </p>
-                    <input
-                      type="password"
-                      id="[##_article_password_##]"
-                      name="[##_article_password_##]"
-                      value=""
-                      placeholder="비밀번호"
-                    />
-                    <button type="submit">확인</button>
-                  </form>
-                </article>
-                <!-- End : 본문 내용 영역 -->
-              </div>
-            </s_permalink_article_rep>
-          </s_article_protected>
+                  <!-- 본문 내용 영역 -->
+                  <article id="article" class="article">
+                    [##_article_rep_desc_##]
+                  </article>
+                  <!-- End : 본문 내용 영역 -->
+
+                  <!-- 태그 -->
+                  <s_tag_label>
+                    <div class="article-tag">
+                      <h3 class="title">TAG</h3>
+                      <div class="tags">[##_tag_label_rep_##]</div>
+                    </div>
+                  </s_tag_label>
+                  <!-- End : 태그 -->
+
+                  <!-- 관련글 -->
+                  <s_article_related>
+                    <!-- related_type_view -->
+                    <div class="related-area">
+                      <div class="related-header">
+                        <h3>관련글</h3>
+                        <a href="[##_article_rep_category_link_##]"
+                          >관련글 더보기</a
+                        >
+                      </div>
+                      <div class="related-list">
+                        <s_article_related_rep>
+                          <div class="related-item">
+                            <a href="[##_article_related_rep_link_##]">
+                              <div class="thumbnail">
+                                <s_article_related_rep_thumbnail>
+                                  <img
+                                    src="[##_article_related_rep_thumbnail_link_##]"
+                                    alt=""
+                                  />
+                                </s_article_related_rep_thumbnail>
+                              </div>
+                              <div class="title">
+                                [##_article_related_rep_title_##]
+                              </div>
+                            </a>
+                          </div>
+                        </s_article_related_rep>
+                      </div>
+                    </div>
+                    <!-- // related_type_view -->
+                  </s_article_related>
+                  <!-- End : 관련글 -->
+
+                  <!-- 댓글 영역 -->
+                  <s_rp>
+                    <div class="article-reply">[##_comment_group_##]</div>
+                  </s_rp>
+                  <!-- End : 댓글 영역 -->
+                </div>
+              </s_permalink_article_rep>
+            </s_article_rep>
+            <s_article_protected>
+              <s_index_article_rep>
+                <div class="article-item">
+                  <a
+                    href="[##_article_rep_link_##]"
+                    class="thumbnail"
+                    data-protected="true"
+                  ></a>
+                  <div class="info">
+                    <div class="title">
+                      <a href="[##_article_rep_link_##]" class="title"
+                        >[##_article_rep_title_##]</a
+                      >
+                    </div>
+                    <div class="category">
+                      <a
+                        href="[##_article_rep_category_link_##]"
+                        class="category"
+                        >[##_article_rep_category_##]</a
+                      >
+                    </div>
+                    <div class="date">[##_article_rep_date_##]</div>
+                  </div>
+                </div>
+              </s_index_article_rep>
+              <s_permalink_article_rep>
+                <div class="article-viewer">
+                  <div class="article-header">
+                    <div class="title">[##_article_rep_title_##]</div>
+                    <div class="category">
+                      <a href="[##_article_rep_category_link_##]"
+                        >[##_article_rep_category_##]</a
+                      >
+                    </div>
+                    <div class="date">[##_article_rep_date_##]</div>
+                  </div>
+
+                  <!-- 본문 내용 영역 -->
+                  <article id="protect">
+                    <form
+                      class="protected_form"
+                      onsubmit="[##_article_dissolve_##]"
+                    >
+                      <p>
+                        보호되어 있는 글입니다. 내용을 보시려면 비밀번호를
+                        입력하세요.
+                      </p>
+                      <input
+                        type="password"
+                        id="[##_article_password_##]"
+                        name="[##_article_password_##]"
+                        value=""
+                        placeholder="비밀번호"
+                      />
+                      <button type="submit">확인</button>
+                    </form>
+                  </article>
+                  <!-- End : 본문 내용 영역 -->
+                </div>
+              </s_permalink_article_rep>
+            </s_article_protected>
+          </div>
 
           <!-- 태그 페이지 (/tag) -->
           <s_tag>

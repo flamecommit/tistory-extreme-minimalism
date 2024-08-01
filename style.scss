@@ -373,13 +373,31 @@ input:-webkit-autofill:active {
     flex-wrap: wrap;
     gap: 12px;
     a {
-      display: block;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      column-gap: 6px;
       padding: 6px 12px;
       background-color: #f7f7f7;
       border-radius: 6px;
+      transition: all 200ms;
+      color: #000;
+      &:before {
+        display: block;
+        content: "";
+        width: 20px;
+        height: 20px;
+        mask-image: url(./images/tag.svg);
+        mask-size: 100%;
+        transition: all 200ms;
+        background-color: #000;
+      }
       &:hover {
         background-color: $primaryColor;
-        color: #ffffff;
+        color: #fff;
+        &:before {
+          background-color: #fff;
+        }
       }
     }
   }
@@ -574,7 +592,7 @@ input:-webkit-autofill:active {
             background-color: #000;
           }
           .like_on .ico_like {
-            background-color: red;
+            background-color: $primaryColor;
           }
           .ico_share {
             width: 30px;
@@ -613,25 +631,35 @@ input:-webkit-autofill:active {
   .article-footer {
     .article-tag {
       margin-top: 100px;
-      column-gap: 12px;
-      .title {
-        font-weight: 700;
-        font-size: 18px;
-      }
-      .tags {
-        margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      font-size: 0;
+      a {
+        font-size: 16px;
         display: flex;
-        flex-wrap: wrap;
-        a {
-          white-space: nowrap;
+        align-items: center;
+        column-gap: 6px;
+        padding: 6px 12px;
+        background-color: #f7f7f7;
+        border-radius: 6px;
+        transition: all 200ms;
+        color: #000;
+        &:before {
+          display: block;
+          content: "";
+          width: 20px;
+          height: 20px;
+          mask-image: url(./images/tag.svg);
+          mask-size: 100%;
+          transition: all 200ms;
+          background-color: #000;
+        }
+        &:hover {
+          background-color: $primaryColor;
+          color: #fff;
           &:before {
-            content: "#";
-          }
-          &:not(:first-child) {
-            margin-left: 4px;
-          }
-          &:hover {
-            color: $primaryColor;
+            background-color: #fff;
           }
         }
       }

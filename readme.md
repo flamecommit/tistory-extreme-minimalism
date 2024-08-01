@@ -1,5 +1,9 @@
 ### Releases Note
 
+v1.4.0
+
+- Tag 디자인 개선 (아이콘 추가)
+
 v1.3.0
 
 - Footer의 최대 가로값 적용 (1024px)

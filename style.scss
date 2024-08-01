@@ -8,6 +8,12 @@
 }
 @font-face {
   font-family: "Pretendard";
+  font-weight: 500;
+  src: url("./images/Pretendard-Medium.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
   font-weight: 700;
   src: url("./images/Pretendard-Bold.woff2") format("woff2");
   font-display: swap;
@@ -508,7 +514,7 @@ input:-webkit-autofill:active {
   }
 }
 
-#article {
+#tt-body-page #article {
   font-size: 16px;
   line-height: 1.5;
   h1,

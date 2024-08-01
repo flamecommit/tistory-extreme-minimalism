@@ -396,7 +396,7 @@ input:-webkit-autofill:active {
       display: none;
     }
     .article-tag {
-      margin-top: 50px;
+      margin-top: 100px;
       column-gap: 12px;
       .title {
         font-weight: 700;
@@ -631,17 +631,79 @@ input:-webkit-autofill:active {
   hr {
     margin: 30px 0;
   }
+  a {
+    color: #0070d1;
+    text-decoration: underline;
+  }
   .container_postbtn {
     // 공감, 통계 등등
-    display: none;
+    // display: none;
+    padding: 0;
+    margin-top: 100px;
+    display: block;
+    .postbtn_like {
+      border: none;
+      box-shadow: $thumbnailShadow;
+      float: none;
+      border-radius: 8px;
+      padding: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .txt_like {
+        display: none;
+      }
+      button {
+        padding: 0;
+        outline: none;
+      }
+      .wrap_btn_share + .wrap_btn {
+        display: none;
+      }
+      .wrap_btn_etc {
+        margin-left: auto;
+      }
+      .ico_like {
+        width: 30px;
+        height: 30px;
+        margin: 0;
+        mask-image: url(./images/heart.svg);
+        mask-position: center;
+        mask-size: 25px;
+        max-width: none;
+        background-color: #000;
+      }
+      .like_on .ico_like {
+        background-color: red;
+      }
+      .ico_share {
+        width: 30px;
+        height: 30px;
+        background-image: url(./images/share.svg);
+        background-position: center;
+        background-size: 21px;
+        max-width: none;
+      }
+      .ico_etc {
+        width: 30px;
+        height: 30px;
+        background-image: url(./images/etc.svg);
+        background-position: center;
+        background-size: 21px;
+        max-width: none;
+      }
+      .layer_post {
+        padding: 12px;
+      }
+      .bundle_post {
+        display: grid;
+        row-gap: 6px;
+      }
+    }
   }
   .another_category {
     // 다른 글 네비게이션
     display: none;
-  }
-  a {
-    color: #0070d1;
-    text-decoration: underline;
   }
 }
 

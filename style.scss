@@ -74,10 +74,7 @@ $thumbnailShadowHover: 0 0 3px 1px rgba(247, 91, 0, 0.5);
 body {
   color: #333;
   min-width: 360px;
-  font-family: "Pretendard", Pretendard, -apple-system, BlinkMacSystemFont,
-    system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
-    "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", sans-serif;
+  font-family: "Pretendard";
   &.scroll-lock {
     overflow: hidden;
   }
@@ -582,6 +579,10 @@ input:-webkit-autofill:active {
             padding: 0;
             outline: none;
           }
+          .wrap_btn {
+            float: none;
+            height: auto;
+          }
           .wrap_btn_share + .wrap_btn {
             display: none;
           }
@@ -667,11 +668,40 @@ input:-webkit-autofill:active {
             }
           }
           .layer_post {
-            padding: 12px;
-          }
-          .bundle_post {
-            display: grid;
-            row-gap: 6px;
+            padding: 0px;
+            box-shadow: $thumbnailShadow;
+            bottom: 50% !important;
+            left: 50% !important;
+            border-radius: 6px;
+            overflow: hidden;
+            .bundle_post {
+              display: grid;
+              .btn_mark {
+                font-family: "Pretendard";
+                font-size: 14px;
+                line-height: 1.5;
+                color: #333;
+                text-align: center;
+                padding: 3px 12px;
+                .ico_sns {
+                  display: none;
+                  // &.ico_url {
+                  // }
+                  // &.ico_kt {
+                  // }
+                  // &.ico_fb {
+                  // }
+                  // &.ico_x {
+                  // }
+                }
+                &:hover {
+                  background-color: #f7f7f7;
+                }
+              }
+            }
+            .ico_arrbt {
+              display: none;
+            }
           }
         }
         .btn_subscription {

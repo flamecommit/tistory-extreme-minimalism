@@ -589,7 +589,7 @@ input:-webkit-autofill:active {
           border: none;
           float: none;
           display: flex;
-          column-gap: 8px;
+          column-gap: 6px;
           justify-content: center;
           align-items: center;
           padding: 0;
@@ -748,7 +748,7 @@ input:-webkit-autofill:active {
   }
   .article-footer {
     .article-tag {
-      margin-top: 20px;
+      margin-top: 18px;
       display: flex;
       flex-wrap: wrap;
       gap: 6px 3px;

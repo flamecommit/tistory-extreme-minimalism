@@ -22,6 +22,7 @@
 $primaryColor: #f75b00;
 $brightColor: #f7a000;
 $thumbnailShadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
+$thumbnailShadowHover: 0 0 3px 1px rgba(247, 91, 0, 0.5);
 
 @mixin tagStyle {
   font-size: 15px;
@@ -345,6 +346,9 @@ input:-webkit-autofill:active {
       background-color: #fff;
       border-radius: 12px;
       box-shadow: $thumbnailShadow;
+      &:hover {
+        box-shadow: $thumbnailShadowHover;
+      }
       img {
         position: relative;
         z-index: 1;
@@ -717,8 +721,23 @@ input:-webkit-autofill:active {
           font-size: 18px;
         }
         a {
+          font-size: 14px;
+          display: flex;
+          align-items: center;
+          &:after {
+            content: "";
+            width: 16px;
+            height: 16px;
+            mask-image: url(./images/arrow.svg);
+            mask-size: auto 11px;
+            mask-position: center;
+            background-color: #333;
+          }
           &:hover {
             color: $primaryColor;
+            &:after {
+              background-color: $primaryColor;
+            }
           }
         }
       }
@@ -739,6 +758,9 @@ input:-webkit-autofill:active {
             font-size: 16px;
             &:hover {
               color: $primaryColor;
+              .thumbnail {
+                box-shadow: $thumbnailShadowHover;
+              }
             }
           }
           .thumbnail {

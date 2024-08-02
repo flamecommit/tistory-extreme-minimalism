@@ -327,6 +327,24 @@ input:-webkit-autofill:active {
       }
     }
   }
+  .article-empty {
+    text-align: center;
+    padding-block: 60px;
+    .text {
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    a {
+      display: inline-block;
+      padding: 6px 12px;
+      background-color: #f7f7f7;
+      border-radius: 6px;
+      &:hover {
+        background-color: $primaryColor;
+        color: #ffffff;
+      }
+    }
+  }
   .article-item {
     display: flex;
     align-items: center;

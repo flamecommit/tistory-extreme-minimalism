@@ -8,6 +8,7 @@ v1.5.0
 - 작성일 포맷 : simple 형태로 변경 (yyyy. m. d. HH:MM => yyyy. m. d.)
 - 태그 버튼 : 버튼 크기, 간격 축소
 - 썸네일 : 오버시 그림자 색 변경
+- Search Layer : 모바일에서 닫힐 때 padding이 먼저 줄어드는 현상 fix
 
 v1.4.0
 

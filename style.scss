@@ -258,7 +258,7 @@ input:-webkit-autofill:active {
   opacity: 0;
   z-index: 100;
   min-width: 360px;
-  transition: opacity 300ms, height 1ms 299ms;
+  transition: opacity 300ms, height 1ms 299ms, padding 1ms 299ms;
   display: flex;
   justify-content: center;
   align-items: center;

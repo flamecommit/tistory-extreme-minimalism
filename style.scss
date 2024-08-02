@@ -24,11 +24,11 @@ $brightColor: #f7a000;
 $thumbnailShadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
 
 @mixin tagStyle {
-  font-size: 16px;
+  font-size: 15px;
   display: flex;
   align-items: center;
   column-gap: 6px;
-  padding: 6px 12px;
+  padding: 6px;
   background-color: #f7f7f7;
   border-radius: 6px;
   color: #000;
@@ -36,8 +36,8 @@ $thumbnailShadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
   &:before {
     display: block;
     content: "";
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     mask-image: url(./images/tag.svg);
     mask-size: 100%;
     background-color: #000;
@@ -400,7 +400,7 @@ input:-webkit-autofill:active {
   .tag-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 9px;
     a {
       @include tagStyle;
     }
@@ -699,7 +699,7 @@ input:-webkit-autofill:active {
       margin-top: 30px;
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
+      gap: 6px 3px;
       font-size: 0;
       a {
         @include tagStyle;

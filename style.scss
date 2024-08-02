@@ -551,25 +551,19 @@ input:-webkit-autofill:active {
         color: #0070d1;
         text-decoration: underline;
       }
+      // 공감, 통계 등등
       .container_postbtn {
-        // 공감, 통계 등등
-        // display: none;
         padding: 0;
         margin-top: 100px;
-        display: block;
+        display: flex;
         .postbtn_like {
           border: none;
-          box-shadow: $thumbnailShadow;
           float: none;
-          border-radius: 8px;
-          padding: 12px;
           display: flex;
-          column-gap: 12px;
+          column-gap: 8px;
           justify-content: center;
           align-items: center;
-          .txt_like {
-            display: none;
-          }
+          padding: 0;
           button {
             padding: 0;
             outline: none;
@@ -579,36 +573,78 @@ input:-webkit-autofill:active {
           }
           .wrap_btn_etc {
             display: block !important;
-            margin-left: auto;
           }
-          .ico_like {
+          .btn_post {
+            .uoc-icon {
+              display: flex;
+              align-items: center;
+              column-gap: 6px;
+              border: 1px solid #eeeeee;
+              background: #f7f7f7;
+              margin: 0;
+              max-width: none;
+              border-radius: 8px;
+              height: 32px;
+              padding: 0 8px;
+              .ico_like {
+                display: block;
+                width: 25px;
+                height: 25px;
+                max-width: none;
+                margin: 0;
+                mask-size: 25px;
+                mask-image: url(./images/heart.svg);
+                mask-position: 0;
+                background: #333;
+              }
+              .txt_like {
+                font-weight: 700;
+                font-size: 18px;
+              }
+              &.like_on {
+                .ico_like {
+                  background-color: $primaryColor;
+                }
+                .txt_like {
+                  color: $primaryColor !important;
+                }
+              }
+            }
+          }
+          @mixin buttonIcon {
+            display: flex;
+            justify-content: center;
+            border: 1px solid #eeeeee;
+            background: #f7f7f7;
+            width: 36px;
+            height: 32px;
+            margin: 0;
+            max-width: none;
+            border-radius: 8px;
+          }
+          @mixin buttonIconBefore {
+            display: block;
+            content: "";
             width: 30px;
             height: 30px;
-            margin: 0;
-            mask-image: url(./images/heart.svg);
             mask-position: center;
-            mask-size: 25px;
-            max-width: none;
-            background-color: #000;
-          }
-          .like_on .ico_like {
-            background-color: $primaryColor;
+            background: #333;
           }
           .ico_share {
-            width: 30px;
-            height: 30px;
-            background-image: url(./images/share.svg);
-            background-position: center;
-            background-size: 21px;
-            max-width: none;
+            @include buttonIcon;
+            &:before {
+              @include buttonIconBefore;
+              mask-size: 21px;
+              mask-image: url(./images/share.svg);
+            }
           }
           .ico_etc {
-            width: 30px;
-            height: 30px;
-            background-image: url(./images/etc.svg);
-            background-position: center;
-            background-size: 21px;
-            max-width: none;
+            @include buttonIcon;
+            &:before {
+              @include buttonIconBefore;
+              mask-size: 25px;
+              mask-image: url(./images/siren.svg);
+            }
           }
           .layer_post {
             padding: 12px;
@@ -618,19 +654,31 @@ input:-webkit-autofill:active {
             row-gap: 6px;
           }
         }
-        > button {
-          display: none;
+        .btn_subscription {
+          margin-left: auto;
+          float: none;
+          border-radius: 8px;
+          border: 1px solid #eeeeee;
+          background-color: #f7f7f7;
+          .txt_state {
+            font-weight: 700;
+            font-size: 16px;
+            color: #333;
+          }
         }
+        // > button {
+        //   display: none;
+        // }
       }
+      // 다른 글 네비게이션
       .another_category {
-        // 다른 글 네비게이션
         display: none;
       }
     }
   }
   .article-footer {
     .article-tag {
-      margin-top: 100px;
+      margin-top: 30px;
       display: flex;
       flex-wrap: wrap;
       gap: 6px;

@@ -852,6 +852,21 @@ input:-webkit-autofill:active {
       margin-top: 100px;
     }
   }
+  .coupang-dynamic-banner {
+    border: 1px solid #eee;
+    padding: 6px;
+    margin-top: 30px;
+    &:after {
+      display: block;
+      content: "이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.";
+      background-color: #f7f7f7;
+      border-top: 1px solid #eee;
+      color: #666666;
+      margin: 6px -6px -6px;
+      font-size: 14px;
+      padding: 3px 6px;
+    }
+  }
 }
 
 #protect {

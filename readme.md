@@ -1,5 +1,9 @@
 ### Releases Note
 
+v1.6.0
+
+- 쿠팡 다이나믹 배너 영역 추가 (.coupang-dynamic-banner)
+
 v1.5.0
 
 - 포스팅 내 이미지에 그림자 효과 추가

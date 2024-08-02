@@ -551,6 +551,12 @@ input:-webkit-autofill:active {
         color: #0070d1;
         text-decoration: underline;
       }
+      .imageblock {
+        margin-block: 1em;
+        img {
+          box-shadow: $thumbnailShadow;
+        }
+      }
       // 공감, 통계 등등
       .container_postbtn {
         padding: 0;

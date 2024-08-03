@@ -4,6 +4,7 @@ v1.6.0
 
 - 쿠팡 다이나믹 배너 영역 추가 (.coupang-dynamic-banner)
 - 포스트버튼 간격 조정
+- 포스팅 상세 페이지 : overflow hidden 추가 (애드센스 추가 시 가로스크롤이 생기는 현상 fix)
 
 v1.5.0
 

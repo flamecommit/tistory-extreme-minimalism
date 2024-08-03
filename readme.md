@@ -1,5 +1,10 @@
 ### Releases Note
 
+v1.7.0
+
+- 포스팅 내 그림자 잘림 현상 fix
+- 이전/다음글, 관련글 위치 변경
+
 v1.6.0
 
 - 쿠팡 다이나믹 배너 영역 추가 (.coupang-dynamic-banner)

@@ -761,6 +761,7 @@ input:-webkit-autofill:active {
         @include tagStyle;
       }
     }
+    // 관련글
     .related-area {
       margin-top: 100px;
       .related-header {
@@ -852,6 +853,56 @@ input:-webkit-autofill:active {
         }
       }
     }
+    // 이전글, 다음글
+    .article-navigator {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 12px;
+      a {
+        overflow: hidden;
+        margin-top: 100px;
+        flex-basis: 50%;
+        flex-shrink: 0;
+        box-shadow: $thumbnailShadow;
+        border-radius: 6px;
+        padding: 12px;
+        .direction {
+          font-weight: 700;
+        }
+        .title {
+          margin-top: 12px;
+          width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          word-break: break-all;
+        }
+        &.next {
+          text-align: right;
+          margin-left: auto;
+          .title {
+            direction: rtl;
+          }
+        }
+        &:hover {
+          box-shadow: $thumbnailShadowHover;
+          color: $primaryColor;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        flex-wrap: wrap;
+        row-gap: 12px;
+        a {
+          flex-grow: 1;
+          flex-basis: 100%;
+          margin-top: 0;
+          &:first-child {
+            margin-top: 100px;
+          }
+        }
+      }
+    }
+    // 댓글
     .article-reply {
       margin-top: 100px;
     }

@@ -995,6 +995,10 @@ input:-webkit-autofill:active {
     &:hover {
       color: $primaryColor;
     }
+    .selected {
+      font-weight: 700;
+      color: $primaryColor;
+    }
   }
   .pager {
     display: flex;

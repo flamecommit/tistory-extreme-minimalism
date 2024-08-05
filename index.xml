@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <skin>
 	<information>
-		<name>Letter</name>
+		<name>극한의 미니멀리즘</name>
 		<version>1.1</version>
 		<description>
-			<![CDATA[ 최소한의 디자인, 깔끔한 스킨을 원하는 블로거를 위해 만들었습니다. 깔끔한 편지지 위에 여러분의 이야기를 들려주세요. ]]>
+			<![CDATA[ 필요한 기능만 담았습니다. ]]>
 		</description>
 		<license>
 			<![CDATA[ MIT License ]]>
 		</license>
 	</information>
 	<author>
-		<name>Tistory</name>
-		<homepage>http://www.tistory.com</homepage>
-		<email>tistoryblog@daum.net</email>
+		<name>신과장</name>
+		<homepage>https://shinsplan.tistory.com</homepage>
+		<email>shinyj1991@gmail.com</email>
 	</author>
 	<default>
 		<recentEntries>4</recentEntries>

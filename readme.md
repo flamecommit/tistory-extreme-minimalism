@@ -1,5 +1,9 @@
 ### Releases Note
 
+v1.8.0
+
+- 미리보기 이미지 추가 (preview.gif)
+
 v1.7.0
 
 - 포스팅 내 그림자 잘림 현상 fix

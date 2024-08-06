@@ -5,6 +5,7 @@ v1.8.0
 - 미리보기 이미지 추가 (preview.gif)
 - 카테고리가 많을 때, GNB 스크롤 추가
 - Pagination : 현재 페이지 강조 스타일 추가
+- copyright 문구 제거 (designed by만 유지)
 
 v1.7.0
 
